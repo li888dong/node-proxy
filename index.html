@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>Title</title>
 </head>
 <body>
-    <button id="btn1">提交</button>
-    <button id="btn2">提交2</button>
-    <script src="./promiseAjax.js"></script>
-    <script>
-        document.querySelector('#btn1').onclick = function(){
-            ajax({url:'http://localhost:8080?name=lidong&age=26',dataType:'text/json'})
-                .then(function(xhr){
-                    console.log(xhr.response);
-                    return ajax({url:'http://localhost:8080?status='+xhr.response})
-                },function(e){
-                    console.log(JSON.stringify(e))
-                })
-                .then(function(xhr){
-                    console.log(xhr.response)
-                },function(e){
-                    console.log(JSON.stringify(e))
-                });
+<button id="btn1">提交</button>
+<button id="btn2">提交2</button>
+<script src="./promiseAjax.js"></script>
+<script>
+	document.querySelector('#btn1').onclick = function () {
+		_ajax({url: 'http://localhost:8080?name=lidong&age=26', dataType: 'text/json'})
+			.then(function (xhr) {
+				console.log(xhr.response);
+				return _ajax({url: 'http://localhost:8080?status=' + xhr.response})
+			}, function (e) {
+				console.log(JSON.stringify(e))
+			})
+			.then(function (xhr) {
+				console.log(xhr.response)
+			}, function (e) {
+				console.log(JSON.stringify(e))
+			});
 
-        }
-
-
-    </script>
+	}
+</script>
 </body>
 </html>

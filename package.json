@@ -4,14 +4,16 @@
   "description": "使用 eventproxy 控制并发",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js"
   },
-  "author": "alsotang <alsotang@gmail.com>",
+  "author": "lidong <498437323@qq.com>",
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.17.0",
     "eventproxy": "^0.3.1",
     "express": "^4.15.3",
+    "http-proxy": "^1.16.2",
     "superagent": "^0.20.0"
   }
 }
