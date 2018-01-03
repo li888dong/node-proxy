@@ -33,7 +33,7 @@ var _ajax = (function (optionsOverride) {
 		async: true,
 		timeout: 0,
 		data: null,
-		dataType: 'text',
+		dataType: 'json',
 		headers: {},
 		onprogress: function () {
 		},
