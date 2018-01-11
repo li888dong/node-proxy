@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- 加载 物可视SDK CSS-->
+    <link href="//iot-dv.cdn.bcebos.com/prod/sdk/bdiotvizplayer.min.css" rel="stylesheet">
+
+    <!-- 加载第三方依赖 -->
+    <script type="text/javascript" src="//cdn.bootcss.com/echarts/3.7.2/echarts.min.js"></script>
+
+    <!-- 加载 物可视SDK-->
+    <script type="text/javascript" src="//iot-dv.cdn.bcebos.com/prod/sdk/bdiotvizplayer.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      #content{
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="content"></div>
+
+  <script type="text/javascript">
+	  const bdIotVizPlayer = window.BDIotVizPlayer;
+	  const containerElement = document.getElementById('content');
+
+	  const myDashboard = bdIotVizPlayer({
+		  overflow: true,
+		  containerElement,
+		  dashboardId: '5a4f1a174418bb0380b5f450'
+	  });
+  </script>
+  </body>
+</html>
